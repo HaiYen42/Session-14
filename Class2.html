@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Convert Feet to Meter</h1>
+    <p>Type a value in the Feet to convert the value to Meter:
+        <div>
+        <label for="">Feet</label>
+        <input id="inputFeet" type="number" placeholder="Feet"
+        oninput="feetConverter(this.value)"
+        onchange="feetConverter(this.value)"
+        >
+         </div>
+         <p><span id="outputMeter">Meter: </span> </p>
+            <script>
+                function feetConverter(valNum){
+                    valNum=parseFloat(valNum);
+                    document.getElementById("outputMeter").innerHTML="Meter: "+ 0.305*valNum;
+                }
+            </script>
+    </p>
+</body>
+</html>
